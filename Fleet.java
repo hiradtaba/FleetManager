@@ -1,24 +1,18 @@
-// Name: Hirad Tabatabaei
-// Course: ECE 122
-// Instructor: Professor Marzulo
-// Due date: March 28, 2018
 
 package project3;
 
 import java.util.ArrayList;
 public class Fleet {
 	
-	// Here is an arraylist of the cars in the fleet; each element is of the type "Car"
 	ArrayList<Car> cars = new ArrayList<Car>();
 	
 	private String company;
 	
-	// This is the constructor of the fleet class
+
 	public Fleet(String owner) {
 		company = owner;
 	}
 	
-	//This method is for printing the general information of all the cars in the fleet
 	public void printGeneralInfo() {
 		
 		System.out.println("|------------------------------------------------|");
@@ -40,7 +34,7 @@ public class Fleet {
 		}
 	}
 	
-	//This method is for printing the maintenance information of all the cars in the fleet
+
 	public void printMaintenanceInfo() {
 		
 		System.out.println("|-------------------------------------------------------------------|");
@@ -52,7 +46,6 @@ public class Fleet {
 		System.out.println("|-------------------------------------------------------------------|");
 	}
 	 
-	//This method is for printing the financial information of all the cars in the fleet
 	public void printFinancialInfo() {
 		
 		System.out.println("|---------------------------------------------------------------------------------------------|");
@@ -65,7 +58,6 @@ public class Fleet {
 	}
 	
 	
-	// This method is for changing the tires of the cars who have less than 10% of their endurance left
 	public void changeTires(double price) {
 		
 		for(int i=0; i<cars.size(); i++ ) {
@@ -78,7 +70,6 @@ public class Fleet {
 		
 	}
 	
-	// This method is for performing maintenance on cars in the fleet which aren't 100% maintained
 	public void doMaintenance(double money) {
 		
 		for (int i=0; i<cars.size(); i++) {
@@ -92,7 +83,7 @@ public class Fleet {
 		
 	}
 	
-	// This method is for filling up the tanks of the cars in the fleet that aren't completely filled up
+
 	public void fillUp(double amount) {
 		for (int i=0; i<cars.size(); i++) {
 			if (cars.get(i).getTankStatus()<100) {
@@ -105,7 +96,7 @@ public class Fleet {
 		}
 	}
 	
-	// This is the delivery method, which picks a car to deliver the boxes, if they are available
+
 	public void deliver(double miles, int boxes) {
 		int min = Integer.MAX_VALUE ;
 		int index =-1;
@@ -135,7 +126,7 @@ public class Fleet {
 		cars.add(new Car(company,make,model,plate,year, capacity, price,odometer,lastMaintenance,fuelCost,tireCost,maintenanceCost,fuelTank,tireodometer));
 	}
 	
-	// This method removes a car from the fleet based on its plate
+	
 	public void remove(String plate) {
 		for (int i = 0; i<cars.size(); i++) {
 			if(cars.get(i).hasPlate(plate)) {
@@ -145,7 +136,6 @@ public class Fleet {
 	}
 	
 	
-	// This is the toString method for the fleet
 	public String toString() {
 		String value = "";
 		for(int i =0; i<cars.size(); i++) {
