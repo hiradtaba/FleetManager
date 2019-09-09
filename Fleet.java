@@ -16,7 +16,7 @@ public class Fleet {
 	public void printGeneralInfo() {
 		
 		System.out.println("|------------------------------------------------|");
-		System.out.println("| Plate | Make | Model | Year | Boxes | Odometer |");
+		System.out.println("| Plate | Maker | Model | Year | Boxes | Odometer |");
 		for (int i = 0; i<cars.size(); i++) {
 			System.out.format("| %7s | %6s | %7s | %4d | %05d | %08.2f |\n",cut(cars.get(i).getPlate(), 7), cut(cars.get(i).getMake(),6), cut(cars.get(i).getModel(),7), cars.get(i).getYear(), cars.get(i).getBoxCapacity(), cars.get(i).getOdometer());
 		}
@@ -38,7 +38,7 @@ public class Fleet {
 	public void printMaintenanceInfo() {
 		
 		System.out.println("|-------------------------------------------------------------------|");
-		System.out.println("| Plate | Make | Model | Year | Fuel(%) | Maintenance(%) | Tires(%) |");
+		System.out.println("| Plate | Maker | Model | Year | Fuel(%) | Maintenance(%) | Tires(%) |");
 		for(int i=0; i<cars.size(); i++) {
 			System.out.format("| %7s | %6s | %7s | %4d | %05.2f | %05.2f | %05.2f |\n",cut(cars.get(i).getPlate(), 7), cut(cars.get(i).getMake(),6), cut(cars.get(i).getModel(),7), cars.get(i).getYear(), cars.get(i).getTankStatus(), cars.get(i).getMaintenanceStatus(), cars.get(i).getTiresStatus());
 
@@ -49,7 +49,7 @@ public class Fleet {
 	public void printFinancialInfo() {
 		
 		System.out.println("|---------------------------------------------------------------------------------------------|");
-		System.out.println("| Plate | Make | Model | Year | Total Cost | Car Price | Maintenance | Tires Cost | Fuel Cost |");
+		System.out.println("| Plate | Maker | Model | Year | Total Cost | Car Price | Maintenance | Tires Cost | Fuel Cost |");
 		for(int i=0; i<cars.size(); i++) {
 			System.out.format("| %7s | %6s | %7s | %4d | %08.2f | %08.2f | %08.2f | %08.2f| %08.2f |\n",cut(cars.get(i).getPlate(), 7), cut(cars.get(i).getMake(),6), cut(cars.get(i).getModel(),7), cars.get(i).getYear(), cars.get(i).getTotalCost(), cars.get(i).getPrice(), cars.get(i).getMaintenanceCost(), cars.get(i).getTireCost(), cars.get(i).getFuelCost());
 
