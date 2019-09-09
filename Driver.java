@@ -13,7 +13,7 @@ public class Driver {
 	public static void main(String[] args) {
 		myscan = new Scanner(System.in);
 		
-		System.out.println("Welcome to the FLEET Manager APP!\n\nPlease inform us your company name:");
+		System.out.println("Welcome to the FLEET Manager APP! Please tell us your company name:");
 		String company = myscan.nextLine();
 		
 		Fleet myfleet = new Fleet(company);
